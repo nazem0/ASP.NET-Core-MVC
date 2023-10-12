@@ -11,13 +11,13 @@ namespace Web_App.Middlewares
         {
             this.next = _next;
         }
-        public Task InvokeAsync(HttpContext Context)
-        {
-            MyDBContext MyDB = new MyDBContext();
-            if (Context.Request.Path == "/category")
-                return Context.Response.WriteAsJsonAsync(MyDB.Categories);
+        //public Task InvokeAsync(HttpContext Context)
+        //{
+        //    MyDBContext MyDB = new MyDBContext();
+        //    if (Context.Request.Path == "/category")
+        //        return Context.Response.WriteAsJsonAsync(MyDB.Categories);
 
-            return next(Context);
-        }
+        //    return next(Context);
+        //}
     }
 }

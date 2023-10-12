@@ -1,0 +1,15 @@
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\bin\Debug\net7.0\Repository Pattern.deps.json
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\bin\Debug\net7.0\Repository Pattern.dll
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\bin\Debug\net7.0\Repository Pattern.pdb
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\bin\Debug\net7.0\Models.dll
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\bin\Debug\net7.0\Models.pdb
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.csproj.AssemblyReference.cache
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.AssemblyInfoInputs.cache
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.AssemblyInfo.cs
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.csproj.CoreCompileInputs.cache
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.csproj.CopyComplete
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.dll
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\refint\Repository Pattern.dll
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\Repository Pattern.pdb
+C:\Users\Nazem\Desktop\Lab\ASP.NET\Repository Pattern\obj\Debug\net7.0\ref\Repository Pattern.dll

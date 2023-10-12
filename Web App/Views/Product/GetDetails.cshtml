@@ -1,0 +1,24 @@
+﻿@using Models
+@model Product
+@section Head{
+    <link rel="stylesheet" href="/css/product.css" />
+}
+@if(Model!=null)
+{
+    
+<div class="card">
+    <div class="imgBox">
+        <img src="https://dummyimage.com/280x280/" alt="@Model.Name" class="mouse">
+    </div>
+
+    <div class="contentBox">
+        <h3>@Model.Name</h3>
+        <h2 class="price">@Model.Price €</h2>
+        <a  class="buy">Buy Now</a>
+    </div>
+
+</div>
+}
+else{
+    <h1 class="text-danger">404 Not Found</h1>
+}

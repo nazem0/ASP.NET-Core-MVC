@@ -8,7 +8,7 @@ namespace Models
         public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.ToTable("Category");
-    
+
             builder.HasKey(b => b.ID);
             builder.Property(b => b.ID).ValueGeneratedOnAdd();
 

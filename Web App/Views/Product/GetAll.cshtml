@@ -1,0 +1,38 @@
+﻿@using ViewModel
+
+@model List<ProductViewModel>
+
+@section Head
+    {
+    <link rel="stylesheet" href="/css/product.css" />
+}
+<div class="row justify-content-center align-items-center">
+    @foreach (ProductViewModel p in Model)
+    {
+        <div class="col-6">
+
+            <div class="card">
+                <div class="imgBox">
+                    @if (@p.ImagesUrl.Count == 0)
+                    {
+                        <img src="/Images/notfound.png" class="card-img-top" alt="...">
+                    }
+                    else
+                    {
+                        <img src="/Images/@p.ImagesUrl.FirstOrDefault()" class="card-img-top" alt="...">
+                    }
+                </div>
+
+                <div class="contentBox">
+                    <h3>@p.Name</h3>
+                    <h2 class="price">@p.Price €</h2>
+                    <a href="/product/edit/@p.ID" class="btn btn-warning">Edit</a>
+                    <a href="/product/remove/@p.ID" class="btn btn-danger">Delete</a>
+                    <a href="/product/getdetails/?ID=@p.ID" class="buy">Buy Now</a>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+
