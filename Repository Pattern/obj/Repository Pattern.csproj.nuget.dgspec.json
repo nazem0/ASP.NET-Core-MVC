@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Repository Pattern\\Repository Pattern.csproj": {}
+    "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Repository Pattern\\Repository Pattern.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Repository Pattern\\Repository Pattern.csproj": {
+    "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Repository Pattern\\Repository Pattern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Repository Pattern\\Repository Pattern.csproj",
+        "projectUniqueName": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Repository Pattern\\Repository Pattern.csproj",
         "projectName": "Repository Pattern",
-        "projectPath": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Repository Pattern\\Repository Pattern.csproj",
+        "projectPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Repository Pattern\\Repository Pattern.csproj",
         "packagesPath": "C:\\Users\\Nazem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Repository Pattern\\obj\\",
+        "outputPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Repository Pattern\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Web-Application-master\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Web-Application-master\\Models\\Models.csproj"
+              "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\ViewModel\\ViewModel.csproj": {
+                "projectPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\ViewModel\\ViewModel.csproj"
+              },
+              "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj"
               }
             }
           }
@@ -48,6 +51,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,14 +85,92 @@
         }
       }
     },
-    "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Web-Application-master\\Models\\Models.csproj": {
+    "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\ViewModel\\ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Web-Application-master\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Web-Application-master\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\ViewModel\\ViewModel.csproj",
+        "projectName": "ViewModel",
+        "projectPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\ViewModel\\ViewModel.csproj",
         "packagesPath": "C:\\Users\\Nazem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nazem\\Desktop\\Lab\\ASP.NET\\Web-Application-master\\Models\\obj\\",
+        "outputPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\ViewModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nazem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Nazem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nazem\\source\\repos\\nazem0\\ASP.NET-Core-MVC\\Web-Application-master\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,29 +204,37 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[7.0.12, )"
             }
           },
           "imports": [

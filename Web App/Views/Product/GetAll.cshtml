@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="/css/product.css" />
 }
 <div class="row justify-content-center align-items-center">
+            
     @foreach (ProductViewModel p in Model)
     {
         <div class="col-6">
-
             <div class="card">
                 <div class="imgBox">
                     @if (@p.ImagesUrl.Count == 0)

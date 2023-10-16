@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Web_App.Middlewares;
-using Repository_Pattern;
-using Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Models;
+using Repository_Pattern;
 
 public class Program
 {
@@ -23,8 +23,23 @@ public class Program
 
             }
             );
-        Builder.Services.AddScoped<MyDBContext>();
+        Builder.Services.AddIdentity<User, IdentityRole>(
+            (i) =>
+            {
+                i.User.RequireUniqueEmail = true;
+                i.SignIn.RequireConfirmedPhoneNumber = false;
+                i.SignIn.RequireConfirmedEmail = false;
+                i.SignIn.RequireConfirmedAccount = false;
+            }
+            ).AddEntityFrameworkStores<MyDBContext>();
+        Builder.Services.Configure<IdentityOptions>(i =>
+        {
+            i.Password.RequireNonAlphanumeric = false;
+            i.Password.RequireUppercase = false;
+
+        });
         Builder.Services.AddScoped<UnitOfWork>();
+        Builder.Services.AddScoped<AccountManager>();
         Builder.Services.AddScoped<ProductManager>();
         Builder.Services.AddScoped<CategoryManager>();
 
@@ -42,6 +57,8 @@ public class Program
 
 
         //Web.MapDefaultControllerRoute();
+        Web.UseAuthentication();
+        Web.UseAuthorization();
         Web.MapControllerRoute("Default", "{Controller=Home}/{Action=Index}/{ID?}");
         Web.Run();
     }

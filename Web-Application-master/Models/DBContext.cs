@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Models
 {
-    public class MyDBContext : DbContext
+    public class MyDBContext : IdentityDbContext<User>
     {
-        public MyDBContext(DbContextOptions<MyDBContext> options) : base(options) { }
+        public MyDBContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

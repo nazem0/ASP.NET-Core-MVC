@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Models;
-using System.Linq;
-
-using Repository_Pattern;
-using ViewModel;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using System.IO;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Models;
+using Repository_Pattern;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using ViewModel;
 
 namespace Web_App.Controllers
 {
@@ -35,19 +35,11 @@ namespace Web_App.Controllers
             }
             return View(ProductsViewModelList);
         }
-        public IActionResult GetDetails()
+        public IActionResult GetDetails(int ID)
         {
-
-            if (int.TryParse(Request.Query["ID"], out int ID))
-            {
-
-                return View(ProductManager.Get(ID));
-            }
-            else
-            {
-                return View();
-            }
+            return View(ProductManager.Get(ID));
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Add()
         {
@@ -59,6 +51,7 @@ namespace Web_App.Controllers
 
             return View();
         }
+        [Authorize]
         [HttpPost]
         public IActionResult Add(ProductViewModel P)
         {
@@ -92,7 +85,7 @@ namespace Web_App.Controllers
         [HttpPost]
         public IActionResult Edit(Product P)
         {
-            
+
             ProductManager.Edit(P, P.ID);
             UnitOfWork.commit();
             return RedirectToAction("GetAll");

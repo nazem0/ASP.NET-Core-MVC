@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Models;
-using System.Threading.Tasks;
 
 namespace Web_App.Middlewares
 {

@@ -1,5 +1,4 @@
 ﻿using Models;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ViewModel
 {
@@ -15,7 +14,7 @@ namespace ViewModel
                 Quantity = PAdded.Quantity,
                 CategoryID = PAdded.CategoryID
             };
-            
+
             Product.ProductAttachments = new List<ProductAttachment>();
             foreach (string PURL in PAdded.ImagesUrl)
             {
