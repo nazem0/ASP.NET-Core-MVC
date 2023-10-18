@@ -10,3 +10,4 @@
 # Ignore build folders
 **/bin/
 **/debug/
+**/obj/
