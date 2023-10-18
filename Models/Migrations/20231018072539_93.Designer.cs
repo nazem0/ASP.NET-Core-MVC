@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Models;
 
@@ -11,17 +12,15 @@ using Models;
 namespace Models.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    partial class MyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231018072539_93")]
+    partial class _93
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-<<<<<<< HEAD:Web-Application-master/Models/Migrations/MyDBContextModelSnapshot.cs
-                .HasAnnotation("ProductVersion", "7.0.0")
-=======
                 .HasAnnotation("ProductVersion", "7.0.12")
->>>>>>> cbba2290ddc111f855844f127aedfe2fe8393ad9:Web-Application-master/Models/Migrations/DBContextModelSnapshot.cs
                 .HasAnnotation("Proxies:ChangeTracking", false)
                 .HasAnnotation("Proxies:CheckEquality", false)
                 .HasAnnotation("Proxies:LazyLoading", true)

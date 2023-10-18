@@ -5,12 +5,9 @@ namespace Models
 {
     public class MyDBContext : IdentityDbContext<User>
     {
-<<<<<<< HEAD
         public MyDBContext() { }
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options) { }
-=======
-        public MyDBContext(DbContextOptions options) : base(options) { }
->>>>>>> cbba2290ddc111f855844f127aedfe2fe8393ad9
+
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

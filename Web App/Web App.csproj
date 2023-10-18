@@ -21,7 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Repository Pattern\Repository Pattern.csproj" />
     <ProjectReference Include="..\ViewModel\ViewModel.csproj" />
-    <ProjectReference Include="..\Web-Application-master\Models\Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

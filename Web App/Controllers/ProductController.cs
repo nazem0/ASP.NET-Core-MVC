@@ -47,7 +47,6 @@ namespace Web_App.Controllers
             }
             return View(ProductsViewModelList);
         }
-<<<<<<< HEAD
         public IActionResult Search(string search, string category, int page = 0)
         {
             if (page < 1)
@@ -90,10 +89,8 @@ namespace Web_App.Controllers
             }
             return View("GetAll", ProductsViewModelList);
         }
-        public IActionResult GetDetails()
-=======
+
         public IActionResult GetDetails(int ID)
->>>>>>> cbba2290ddc111f855844f127aedfe2fe8393ad9
         {
             return View(ProductManager.Get(ID));
         }
