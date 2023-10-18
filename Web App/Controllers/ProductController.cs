@@ -25,9 +25,21 @@ namespace Web_App.Controllers
             UnitOfWork = _UnitOfWork;
             CategoryManager = _CategoryManager;
         }
-        public IActionResult GetAll()
+        public IActionResult GetAll(int page = 0)
         {
-            List<Product> ProductsList = ProductManager.Get().ToList();
+            List<Product> ProductsList = new List<Product> { };
+            if (page < 1)
+            {
+                page = 1;
+            }
+
+
+            int PageSize = 2;
+            ProductsList = ProductManager.Get()
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
             List<ProductViewModel> ProductsViewModelList = new List<ProductViewModel>();
             foreach (Product p in ProductsList)
             {
@@ -35,7 +47,53 @@ namespace Web_App.Controllers
             }
             return View(ProductsViewModelList);
         }
+<<<<<<< HEAD
+        public IActionResult Search(string search, string category, int page = 0)
+        {
+            if (page < 1)
+            {
+                page = 1;
+            }
+            int PageSize = 2;
+            List<Product> ProductsList = new List<Product> { };
+            IQueryable<Product> Filteration = ProductManager.Get();
+            if (!string.IsNullOrEmpty(category))
+            {
+                Filteration = Filteration
+                .Where(
+                    i => i.Category.Name
+                        .ToLower()
+                        .Contains(category)
+                    );
+
+            }
+            if (!string.IsNullOrEmpty(search))
+            {
+                Filteration = Filteration
+                .Where(
+                    i => i.Name
+                        .ToLower()
+                        .Contains(search)
+                    );
+            }
+
+            int Count = Filteration.Count();
+            ProductsList = Filteration
+                            .Skip((page - 1) * PageSize)
+                            .Take(PageSize).ToList();
+
+
+            List<ProductViewModel> ProductsViewModelList = new List<ProductViewModel>();
+            foreach (Product p in ProductsList)
+            {
+                ProductsViewModelList.Add(p.ToProductViewModel());
+            }
+            return View("GetAll", ProductsViewModelList);
+        }
+        public IActionResult GetDetails()
+=======
         public IActionResult GetDetails(int ID)
+>>>>>>> cbba2290ddc111f855844f127aedfe2fe8393ad9
         {
             return View(ProductManager.Get(ID));
         }

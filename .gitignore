@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+
+# Ignore Visual Studio files
+**/.vs/
+
+# Ignore build folders
+**/bin/
+**/debug/
